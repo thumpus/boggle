@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}BOGGLE{% endblock %}
+
+{% block content %}  
+        {% for row in game %}
+            <span>{{row[0]}}</span><span>{{row[1]}}</span><span>{{row[2]}}</span><span>{{row[3]}}</span><span>{{row[4]}}</span> <br>
+        {% endfor %} 
+    <br>
+    <h1 id = "timeLeft">60</h1>
+    <h2 id = "message"></h2>
+    <form>
+        <input type = "text" name = "guess" id = "guess">
+        <input type = "submit" value = "Submit" id = "submitButton"> 
+    </form>
+    <h3>Your Score:</h3>
+    <h4>0</h4>
+    <script src="/static/app.js"></script>
+{% endblock %}
